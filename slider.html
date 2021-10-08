@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이더</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            border:none;
+            padding:0;
+        }
+        img{vertical-align: bottom;
+            width:100%;
+        }
+        .clearfix::after{
+            content:'';
+            display:block;
+            clear:both;
+        }
+        .wrap{
+            width:100%;
+            max-width:1200px;
+            margin:0 auto;
+            overflow:hidden;
+        }
+        h1{
+            margin:30px 0;
+            font-size:40px;
+            color:red;
+            text-align:center;
+        }
+        /* 슬라이더가 기준임 relative */
+        .slider{
+            position:relative;
+        }
+        .slide-imgs{
+            position:relative;
+            height:400px;
+        }
+        .img-box{
+            position:absolute;
+            left:0;
+            top:0;
+            
+        }
+        .slide-pager{
+            position:absolute;
+            left:0;
+            right:0;
+            bottom:20px;
+            display:flex;
+            justify-content: center;
+        }
+        span{
+            width:20px;
+            height: 20px;
+            margin:0 10px;
+            border-radius: 10px;
+            background-color: #aaa;
+            text-indent: -999999px;
+        }
+        .slide-btn{
+            position:absolute;
+            left:0;
+            right:0;
+            top:50%;
+            transform: translate(0,-50%);
+            display:flex;
+            justify-content: space-between;
+        }
+        .btn{
+            width:40px;
+            height:40px;
+            margin:0 20px;
+            background-color: #fff;
+            text-indent: -999999px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <h1>슬라이더</h1>
+        <div class="slider">
+            <!-- 슬라이드이미지들 -->
+            <div class="slide-imgs">
+                <div class="img-box img01">
+                <img src="./images/img-back01.jpg" alt="1번째 이미지">
+                </div>
+                <div class="img-box img02">
+                <img src="./images/img-back02.jpg" alt="2번째 이미지">
+                </div>
+                <div class="img-box img03">
+                <img src="./images/img-back03.jpg" alt="3번째 이미지">
+                </div>
+                <div class="img-box img04">
+                <img src="./images/img-back04.jpg" alt="4번째 이미지">
+                </div>
+                <div class="img-box img05">
+                <img src="./images/img-back05.jpg" alt="5번째 이미지">
+                </div>
+                </div>
+            <!-- 슬라이드페이저 -->
+            <div class="slide-pager">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+            </div>
+            <!-- 앞으로뒤로 버튼 -->
+            <div class="slide-btn">
+                <div class="btn btn-prev">이전</div>                
+                <div class="btn btn-next">이후</div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
